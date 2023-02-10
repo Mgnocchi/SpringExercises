@@ -11,9 +11,14 @@ public class Main {
         // Singletons are the default and immediate)
         ApplicationContext context = new GenericXmlApplicationContext("applicationContext.xml");
         // get object
-        Coach coach = context.getBean("coach", Coach.class);
+        Coach constructorCoach = context.getBean("constructorCoach", Coach.class);
         // use object
-        System.out.printf("Coach says: %s\n", coach.getWorkout());
-        System.out.printf("Coach says: %s\n", coach.getFortune());
+        System.out.printf("Coach says: %s\n", constructorCoach.getWorkout());
+        System.out.printf("Coach says: %s\n", constructorCoach.getFortune());
+        // get object
+        Coach setterCoach = context.getBean("setterCoach", Coach.class);
+        // use object
+        System.out.printf("Coach says: %s\n", setterCoach.getWorkout());
+        System.out.printf("Coach says: %s\n", setterCoach.getFortune());
     }
 }
