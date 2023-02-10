@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>_01_IOC-demo</module>
+        <module>_02_DependencyInjection-demo</module>
     </modules>
 
     <properties>

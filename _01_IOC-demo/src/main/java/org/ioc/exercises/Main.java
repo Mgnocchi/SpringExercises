@@ -1,4 +1,4 @@
-package org.exercises;
+package org.ioc.exercises;
 
 
 import org.springframework.context.ApplicationContext;

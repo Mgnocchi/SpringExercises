@@ -1,4 +1,4 @@
-package org.exercises;
+package org.ioc.exercises;
 
 public class BaseballCoach implements Coach {
     @Override
