@@ -14,7 +14,7 @@
     </bean>
     <bean name="setterCoach" class="org.di.exercises.sport.TrackCoach">
         <!--
-        the name is matched (with some case flexibility) to a setter method:
+        the name is matched (module the camelcase) to a setter method:
         in this case Spring will look for a setter called "setFortuneService"
 
         the ref is the bean name -->
