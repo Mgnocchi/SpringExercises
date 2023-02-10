@@ -11,7 +11,7 @@
           destroy-method="destroyMethod">
         <!-- Init and destroy methods must have empty arguments. They can have any return value, but that output cannot
         be captured, so it's usually void-->
-        <!-- the cleanup doesn't run if we don't explicitly close the context in the java code! -->
+        <!-- the cleanup doesn't always run! check main for more on this -->
         <constructor-arg value="org.lifecycle.exercises.advice/Fortune.csv"/>
     </bean>
 

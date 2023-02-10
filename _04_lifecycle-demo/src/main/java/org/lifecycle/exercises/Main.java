@@ -21,6 +21,14 @@ public class Main {
         System.out.println("\t> " + lifeCoach.getAdvice());
 
         // the cleanup doesn't run if we don't close the context!
+        // similarly it's not called for prototype scoped beans, but there is a workaround.
         context.close();
+
+        /*
+        For prototype scoped beans, if they implement the DisposableBean interface, and thus, a destroy() method, it is
+        possible to create a custom bean processor that tracks those disposable beans and closes them.
+
+        An example from the course has been added as a zip file to the resources of this module
+         */
     }
 }
