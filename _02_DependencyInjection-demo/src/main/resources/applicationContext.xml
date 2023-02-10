@@ -11,6 +11,7 @@
     <bean name="fortuneService" class="org.di.exercises.fortune.DefaultFortuneService"/>
     <bean name="constructorCoach" class="org.di.exercises.sport.BaseballCoach">
         <constructor-arg ref="fortuneService"/>
+        <constructor-arg value="pippo@banana.it"/>
     </bean>
     <bean name="setterCoach" class="org.di.exercises.sport.TrackCoach">
         <!--
@@ -18,7 +19,8 @@
         in this case Spring will look for a setter called "setFortuneService"
 
         the ref is the bean name -->
-        <property ref="fortuneService" name="fortuneService"/>
+        <property name="fortuneService" ref="fortuneService"/>
+        <property name="email" value="franco@ortofrutta.com"/>
     </bean>
 
 </beans>

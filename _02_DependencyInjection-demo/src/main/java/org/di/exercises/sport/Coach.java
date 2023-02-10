@@ -4,4 +4,6 @@ public interface Coach {
     String getWorkout();
 
     String getFortune();
+
+    String getEmail ();
 }
