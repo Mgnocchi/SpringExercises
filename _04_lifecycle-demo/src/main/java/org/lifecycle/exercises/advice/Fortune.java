@@ -1,11 +1,11 @@
 package org.lifecycle.exercises.advice;
 
-import org.lifecycle.exercises.commons.FortuneSource;
+import org.lifecycle.exercises.commons.DataSource;
 
 public class Fortune implements AdviceService {
-    private final FortuneSource fortunes;
+    private final DataSource<String> fortunes;
 
-    public Fortune(FortuneSource fortunes) {
+    public Fortune(DataSource<String> fortunes) {
         this.fortunes = fortunes;
     }
 
