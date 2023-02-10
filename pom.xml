@@ -11,6 +11,7 @@
     <modules>
         <module>_01_IOC-demo</module>
         <module>_02_DependencyInjection-demo</module>
+        <module>_03_scopes-demo</module>
     </modules>
 
     <properties>
