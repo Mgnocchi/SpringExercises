@@ -21,6 +21,6 @@ public class Main {
         // use object
         System.out.printf("Coach says: %s\n", setterCoach.getWorkout());
         System.out.printf("Coach says: %s\n", setterCoach.getFortune());
-        System.out.println("with e-mail: " + constructorCoach.getEmail());
+        System.out.println("with e-mail: " + setterCoach.getEmail());
     }
 }
