@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
+    // private field
     @Autowired
     private AdviceService advice;
 
