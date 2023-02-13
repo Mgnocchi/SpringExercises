@@ -15,6 +15,7 @@
         <module>_04_lifecycle-demo</module>
         <module>_05_annotations-demo</module>
         <module>_06_autowiring-demo</module>
+        <module>_07_qualifier-demo</module>
     </modules>
 
     <properties>
