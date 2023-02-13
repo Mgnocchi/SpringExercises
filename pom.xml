@@ -17,6 +17,7 @@
         <module>_06_autowiring-demo</module>
         <module>_07_qualifier-and-annotation-properties-demo</module>
         <module>_08_scopes-annotations-demo</module>
+        <module>_09_lifecycle-annotations-demo</module>
     </modules>
 
     <properties>
