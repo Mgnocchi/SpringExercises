@@ -19,7 +19,7 @@ public class FootballCoach implements Coach {
     }
 
     @Autowired
-    public void setAdvice(AdviceService advice) {
+    public void theSetterDoesntNeedAConventionalName(AdviceService advice) {
         this.advice = advice;
     }
 
