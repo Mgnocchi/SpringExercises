@@ -1,6 +1,6 @@
 package org.lifecycleannotations.exercises.commons;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
@@ -39,6 +39,13 @@ public class FortuneSource implements DataSource<String> {
         }
         return null;
     }
+
+/* LIFECYCLE METHODS ---------------------------------------------------------------------------------------------------
+*   These methods can have any access modifier (here they are private).
+*   They can return any kind of value, but since that value can't be captured they are generally returning 'void'
+*   Any name can be used.
+*   These methods MUST BE no-argument methods (but since they run post constructor we can have some info from there)
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     @PostConstruct
     private void initMethod() {
         System.out.println("I'm in the init method of " + this.getClass());
