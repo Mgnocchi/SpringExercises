@@ -3,6 +3,7 @@ package org.qualifier.exercises.sport;
 import org.qualifier.exercises.advice.AdviceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 // field injection
@@ -13,6 +14,8 @@ public class TennisCoach implements Coach {
     @Autowired
     @Qualifier("basicAdvice")//this is the bean name, which is default here
     private AdviceService advice;
+    @Value("${coach.pippobbaudo.email}")
+    private String email;
 
     // empty constructor
     public TennisCoach() {
@@ -25,6 +28,11 @@ public class TennisCoach implements Coach {
     @Override
     public String getAdvice() {
         return advice.getAdvice();
+    }
+
+    @Override
+    public String getEmail() {
+        return this.email;
     }
 
     // no setter
