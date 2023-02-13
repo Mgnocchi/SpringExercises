@@ -9,15 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>_01_IOC-demo</module>
-        <module>_02_DI-and-xml-properties-demo</module>
-        <module>_03_scopes-demo</module>
-        <module>_04_lifecycle-demo</module>
-        <module>_05_annotations-demo</module>
-        <module>_06_autowiring-demo</module>
-        <module>_07_qualifier-and-annotation-properties-demo</module>
-        <module>_08_scopes-annotations-demo</module>
-        <module>_09_lifecycle-annotations-demo</module>
+        <module>A-Basics-of-Spring</module>
     </modules>
 
     <properties>

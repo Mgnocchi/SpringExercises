@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.exercises</groupId>
+        <artifactId>SpringExercises</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>A-Basics-of-Spring</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>_01_IOC-demo</module>
+        <module>_02_DI-and-xml-properties-demo</module>
+        <module>_03_scopes-demo</module>
+        <module>_04_lifecycle-demo</module>
+        <module>_05_annotations-demo</module>
+        <module>_06_autowiring-demo</module>
+        <module>_07_qualifier-and-annotation-properties-demo</module>
+        <module>_08_scopes-annotations-demo</module>
+        <module>_09_lifecycle-annotations-demo</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
