@@ -14,6 +14,7 @@
         <module>_03_scopes-demo</module>
         <module>_04_lifecycle-demo</module>
         <module>_05_annotations-demo</module>
+        <module>_06_autowiring-demo</module>
     </modules>
 
     <properties>
