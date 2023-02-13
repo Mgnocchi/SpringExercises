@@ -18,9 +18,15 @@ public class Main {
         System.out.println(lifeCoach.getTraining());
 
         // autowired with setter with the same fortune service object
-        Coach footballCoach = context.getBean("teacherOfFeets", Coach.class);
+        Coach footballCoach = context.getBean("teacherOfFeet", Coach.class);
         System.out.println("Feet:");
         System.out.println(footballCoach.getAdvice());
         System.out.println(footballCoach.getTraining());
+
+        // autowired with field injection WHICH IS NOT RECOMMENDED
+        Coach tennisCoach = context.getBean("tennisCoach", Coach.class);
+        System.out.println("Tennis is boring:");
+        System.out.println(tennisCoach.getAdvice());
+        System.out.println(tennisCoach.getTraining());
     }
 }

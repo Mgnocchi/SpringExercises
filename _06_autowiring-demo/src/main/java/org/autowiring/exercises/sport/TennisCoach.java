@@ -4,13 +4,17 @@ import org.autowiring.exercises.advice.AdviceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("teacherOfFeet")
-public class FootballCoach implements Coach {
+@Component
+public class TennisCoach implements Coach {
+    @Autowired
     private AdviceService advice;
 
+    // empty constructor
+    public TennisCoach() {
+    }
     @Override
     public String getTraining() {
-        return "Kick some balls! ... Not those!";
+        return "Tennis some balls";
     }
 
     @Override
@@ -18,9 +22,5 @@ public class FootballCoach implements Coach {
         return advice.getAdvice();
     }
 
-    @Autowired
-    public void theSetterDoesntNeedAConventionalName(AdviceService advice) {
-        this.advice = advice;
-    }
-
+    // no setter
 }
