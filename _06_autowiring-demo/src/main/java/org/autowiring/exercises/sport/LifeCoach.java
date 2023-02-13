@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class LifeCoach implements Coach {
     private final AdviceService advice;
 
-    // when only a single constructor is present the Autowiring happens automatically
+    // when only a single constructor is present the Autowiring happens automatically. Of course the bean must be recognized by Spring (here the Component annotation)
     public LifeCoach(AdviceService advice) {
         this.advice = advice;
     }
