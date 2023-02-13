@@ -2,7 +2,6 @@ package org.lifecycleannotations.exercises;
 
 import org.lifecycleannotations.exercises.sport.Coach;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /*
  * Spring lets users customize some steps of a bean lifecycle. This helps (for example) with implementing preparation
@@ -16,7 +15,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext("org.lifecycleannotations.exercises");
+                new AnnotationConfigApplicationContext("org.lifecycleannotations.exercises"); //By targeting a package we don't need @Configuration and @ComponentScan
+        //                                              Main.class                                        //targeting the class is usually simpler but needs the annotations
 
         Coach lifeCoach = context.getBean("lifeCoach", Coach.class);
         System.out.println("\t> " + lifeCoach.getAdvice());
