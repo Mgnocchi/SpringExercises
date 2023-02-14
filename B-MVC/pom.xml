@@ -15,6 +15,7 @@
 
     <modules>
         <module>_01_mvc-configuration-xml</module>
+        <module>_02_mvc-controller</module>
     </modules>
 
     <properties>
