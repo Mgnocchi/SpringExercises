@@ -11,6 +11,8 @@
     <title>Success!</title>
 </head>
 <body>
-
+    <h3>
+      Student name: ${message}
+    </h3>
 </body>
 </html>

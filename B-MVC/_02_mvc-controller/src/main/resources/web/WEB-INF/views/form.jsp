@@ -11,6 +11,9 @@
     <title>Form</title>
 </head>
 <body>
-
+    <form action="processForm" method="get">
+        <input type="text" name="studentName" placeholder="name"/>
+        <input type="submit">
+    </form>
 </body>
 </html>

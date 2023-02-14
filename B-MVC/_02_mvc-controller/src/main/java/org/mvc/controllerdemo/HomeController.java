@@ -1,6 +1,8 @@
 package org.mvc.controllerdemo;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -19,8 +21,12 @@ public class HomeController {
         return "form";
     }
 
-    @RequestMapping("/formSuccess")
-    public String showFormSuccess() {
+    @RequestMapping("/processForm")
+    public String processForm(HttpServletRequest request, Model model) {
+        final String studentName = request.getParameter("studentName");
+        final String goodName = studentName.toLowerCase().charAt(0) + studentName.toLowerCase().substring(1);
+        model.addAttribute("message", "hello " + goodName);
         return "formSuccess";
     }
+
 }
