@@ -21,6 +21,7 @@
             <tr>
                 <td>Name: <c:out value="${student.name}"/></td>
                 <td>Surname: <c:out value="${student.surname}"/></td>
+                <td>Country: <c:out value="${countries.get(student.country)}"/></td>
             </tr>
             <br>
         </c:forEach>

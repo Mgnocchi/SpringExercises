@@ -3,14 +3,19 @@ package org.mvc.controllerdemo;
 
 import org.business.logic.Student;
 import org.business.logic.StudentManager;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Map;
+
 @Controller
 public class HomeController {
     StudentManager studentManager;
+    @Value("#{countryOptions}")
+    private Map<String,String> countriesMap;
 
     public HomeController(StudentManager studentManager) {
         this.studentManager = studentManager;
@@ -28,6 +33,7 @@ public class HomeController {
     @RequestMapping("/form")
     public String showForm(Model model) {
         model.addAttribute("student", new Student());
+        model.addAttribute("countries", this.countriesMap);
         return "form";
     }
 
@@ -45,6 +51,7 @@ public class HomeController {
     @RequestMapping("/list")
     public String listStudents(Model model) {
         model.addAttribute("studentsList", studentManager.getRegisteredStudents());
+        model.addAttribute("countries", this.countriesMap);
         return "list";
     }
 

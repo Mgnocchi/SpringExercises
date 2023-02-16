@@ -4,6 +4,16 @@ public class Student implements Comparable<Student>{
     private String Name;
     private String Surname;
 
+    private String Country;
+
+    public String getCountry() {
+        return Country;
+    }
+
+    public void setCountry(String country) {
+        Country = country;
+    }
+
     public String getName() {
         return Name;
     }

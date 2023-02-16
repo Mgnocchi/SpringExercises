@@ -18,6 +18,12 @@
         First Name: <form:input path="name"   />
         <br>
         Last Name: <form:input path="surname" />
+        <br>
+        <label> Country:
+            <form:select path="country">
+                <form:options items="${countries}"/>
+            </form:select>
+        </label>
 
         <input type="submit" value="Submit">
     </form:form>
