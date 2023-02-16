@@ -12,7 +12,7 @@
     <title>Form</title>
 </head>
 <body>
-                                            <!-- modelAttribute must match the name of the attribute given to addAttribute -->
+<!-- modelAttribute must match the name of the attribute given to addAttribute -->
     <form:form action="processForm" modelAttribute="student">
                             <!-- path must match the getters and setters -->
         First Name: <form:input path="name"   />

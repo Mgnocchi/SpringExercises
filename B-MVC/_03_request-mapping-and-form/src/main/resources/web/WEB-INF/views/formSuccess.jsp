@@ -12,9 +12,18 @@
 </head>
 <body>
     <h3>
-      Student name: ${message}
+      Successfully added student ${Student.name} ${Student.surname}
     </h3>
 <br><br>
-Actually I already know that the student is ${Student.name} ${Student.surname}
+    <a href="${pageContext.request.contextPath}/form">
+        <button type="button" >Add another User</button>
+    </a>
+    <a href="${pageContext.request.contextPath}/list">
+        <button type="button">View Registered Users</button>
+    </a>
+    <a href="${pageContext.request.contextPath}/">
+        <button type="button">Go to Homepage</button>
+    </a>
+
 </body>
 </html>
