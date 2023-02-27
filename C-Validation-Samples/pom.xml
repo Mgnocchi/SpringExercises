@@ -13,6 +13,7 @@
 
     <modules>
         <module>_01_mvc-validation-example</module>
+        <module>_02_mvc-preProcessing</module>
     </modules>
 
     <dependencies>
