@@ -12,6 +12,7 @@
         <module>A-Basics-of-Spring</module>
         <module>B-MVC</module>
         <module>C-Validation-Samples</module>
+        <module>D-BasicAOP</module>
     </modules>
 
     <properties>
