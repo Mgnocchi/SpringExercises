@@ -13,12 +13,13 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class App {
     public static void main( String[] args ) {
         ApplicationContext context = new AnnotationConfigApplicationContext(App.class);
-
         Doer doer = context.getBean("actualDoer", Doer.class);
 
-        doer.doThing();
+        System.out.println("We are in the main. We did the thing: " + doer.getDidTheThing() + " time(s). Now we start doing the thing:\n");
 
-        System.out.println(doer.getDidTheThing());
+        doer.doThing(true);
+
+        System.out.println("\nAfter having done things we are back in the main. We did the thing: " + doer.getDidTheThing() + " time(s)");
 
     }
 }
