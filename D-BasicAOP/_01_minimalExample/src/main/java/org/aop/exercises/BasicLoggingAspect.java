@@ -30,6 +30,8 @@ public class BasicLoggingAspect {
   - throws: the exceptions the method can throw                                                             OPTIONAL
 
   "*" is a wildcard symbol.
+  ".." matches all argument types and number
+  arguments must have their FULLY QUALIFIED name, same for the classes on which the method is being called
 
   * */
     @Before("execution(public String org.aop.exercises.Doer.doThing(boolean)) && args(bool)")                                        //pointcut expression: were the aspect is inserted
@@ -39,7 +41,7 @@ public class BasicLoggingAspect {
         System.out.println("we can retrieve the parameter, which is " + bool);
     }
 
-    @AfterReturning(value = "execution(public String org.aop.exercises.Doer.doThing(boolean))  && args(bool)", returning = "output", argNames = "bool,output") //pointcut expression: were the aspect is inserted
+    @AfterReturning(value = "execution(public String doThing(boolean))  && args(bool)", returning = "output", argNames = "bool,output") //pointcut expression: were the aspect is inserted
     public void afterDoThing (Boolean bool, String output) {
         int did = doer.getDidTheThing(); //this is to show the workflow, to tangle the object in the cross-cutting concerns like this might not be ideal
         System.out.println("we are after the doThing execution. Did the thing " + did + " times");
