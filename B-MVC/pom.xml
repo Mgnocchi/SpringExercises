@@ -17,6 +17,7 @@
         <module>_01_mvc-configuration-xml</module>
         <module>_02_mvc-controller</module>
         <module>_03_request-mapping-and-form</module>
+        <module>_01b_mvc-configuration-pureJava</module>
     </modules>
 
     <dependencies>
