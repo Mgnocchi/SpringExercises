@@ -13,6 +13,7 @@
         <module>B-MVC</module>
         <module>C-Validation-Samples</module>
         <module>D-BasicAOP</module>
+        <module>E-Security</module>
     </modules>
 
     <properties>
@@ -20,6 +21,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>6.0.4</spring.version>
+        <spring-security.version>6.0.1</spring-security.version>
         <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
         <hibernate-validator.version>8.0.0.Final</hibernate-validator.version>
         <glassfish.expressly.version>5.0.0</glassfish.expressly.version>
@@ -79,6 +81,17 @@
                 <groupId>org.glassfish.expressly</groupId>
                 <artifactId>expressly</artifactId>
                 <version>${glassfish.expressly.version}</version>
+            </dependency>
+            <!-- Spring security -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring-security.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
