@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>_01_basic_security_demo</module>
+        <module>_02_roles_security_demo</module>
     </modules>
 
     <dependencies>
