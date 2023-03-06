@@ -13,5 +13,6 @@
     "italiano",
     "veneto",
     "tedesco bavarese"
-  ]
+  ],
+  "newProperty": "not needed in the application"
 }

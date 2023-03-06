@@ -1,5 +1,8 @@
 package org.exercises;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ComplexDude {
     String id;
     String name;
