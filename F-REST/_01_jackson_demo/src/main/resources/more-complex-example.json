@@ -1,0 +1,17 @@
+{
+  "id": 324,
+  "name": "pizzo",
+  "surname": "puzzo",
+  "address": {
+    "street": "strada dei pozzi",
+    "city": "codroipo",
+    "stateorregion": "Friuli Venezia Giulia",
+    "zip": 33033,
+    "country": "Serenissima Repubblica di Venezia"
+  },
+  "languages": [
+    "italiano",
+    "veneto",
+    "tedesco bavarese"
+  ]
+}
