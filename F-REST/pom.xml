@@ -11,6 +11,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>_01_jackson_demo</module>
+        <module>_02_basic_REST</module>
+
     </modules>
 
     <properties>
