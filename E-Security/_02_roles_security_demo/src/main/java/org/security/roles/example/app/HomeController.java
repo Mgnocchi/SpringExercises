@@ -1,21 +1,21 @@
 package org.security.roles.example.app;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
 
-    @RequestMapping("/index")
+    @GetMapping("/index")
     public String showHomePage() {
         return "homepage";
     }
 
-    @RequestMapping("/users")
+    @GetMapping("/users")
     public String showUsersPage() {
         return "page_users";
     }
-    @RequestMapping("/admins")
+    @GetMapping("/admins")
     public String showAdminsPage() {
         return "page_admins";
     }

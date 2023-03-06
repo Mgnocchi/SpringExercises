@@ -24,7 +24,8 @@ public class SecurityConfig {
                         .requestMatchers("/admins/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
-                .formLogin(Customizer.withDefaults());
+                .formLogin(Customizer.withDefaults())
+                .logout().logoutSuccessUrl("/index?logout");
         return http.build();
     }
 

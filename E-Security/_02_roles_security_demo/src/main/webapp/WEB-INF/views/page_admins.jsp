@@ -12,5 +12,9 @@
 </head>
 <body>
   <h1>Page accessible to Admins</h1>
+
+  <a href="${pageContext.request.contextPath}/index">
+      <button type="button" >Go to home page</button>
+  </a>
 </body>
 </html>
