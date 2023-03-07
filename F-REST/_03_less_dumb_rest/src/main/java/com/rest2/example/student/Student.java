@@ -1,9 +1,16 @@
 package com.rest2.example.student;
 
-public class Student {
-    private String name;
-    private String surname;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
+@Component
+@Scope("prototype")
+public class Student {
+    private String name = null;
+    private String surname = null;
+
+    public Student() {
+    }
     public Student(String name, String surname) {
         this.name = name;
         this.surname = surname;
@@ -23,6 +30,11 @@ public class Student {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public void set(String name, String surname) {
+        this.setName(name);
+        this.setSurname(surname);
     }
 
 }

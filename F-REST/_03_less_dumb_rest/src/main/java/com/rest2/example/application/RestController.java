@@ -1,5 +1,6 @@
 package com.rest2.example.application;
 
+import com.rest2.example.student.HandledStudent;
 import com.rest2.example.student.Student;
 import com.rest2.example.student.StudentHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,10 @@ public class RestController {
     public List<Student> getSomeStudents() {
         StudentHandler handler = context.getBean("studentHandler", StudentHandler.class);
         handler.refresh(); //to remove when I add an input system
-        handler.register("franco","franchi");
-        handler.register("non fa", "ridere");
+        HandledStudent current = context.getBean("handledStudent", HandledStudent.class);
+        current.set("franco","franchi");
+        current = context.getBean("handledStudent", HandledStudent.class);
+        current.set("non fa", "ridere");
         return handler.getRegisteredCopy();
     }
 
