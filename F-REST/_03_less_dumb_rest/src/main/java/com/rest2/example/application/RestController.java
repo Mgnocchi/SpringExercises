@@ -4,6 +4,7 @@ import com.rest2.example.errors.ResourceNotFoundException;
 import com.rest2.example.student.HandledStudent;
 import com.rest2.example.student.Student;
 import com.rest2.example.student.StudentHandler;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,14 +24,12 @@ public class RestController {
 
     @GetMapping("/students")
     public List<Student> getSomeStudents() {
-        this.initTestStudents();
         StudentHandler handler = context.getBean("studentHandler", StudentHandler.class);
         return handler.getRegisteredCopy();
     }
 
     @GetMapping("/students/{studentId}")
     public Student getStudent(@PathVariable int studentId) {
-        this.initTestStudents();
         try {
             StudentHandler handler = context.getBean("studentHandler", StudentHandler.class);
             return handler.getRegisteredCopy().get(studentId);
@@ -39,13 +38,13 @@ public class RestController {
         }
     }
 
-
     @Autowired
     public void setContext(ApplicationContext context) {
         this.context = context;
     }
 
     // SERVICE METHODS -------------------------------------------------------------------------------------------------
+    @PostConstruct
     private void initTestStudents() {
         StudentHandler handler = context.getBean("studentHandler", StudentHandler.class);
         handler.refresh(); //to remove when I add an input system
