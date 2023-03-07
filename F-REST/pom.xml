@@ -12,7 +12,7 @@
     <modules>
         <module>_01_jackson_demo</module>
         <module>_02_basic_REST</module>
-
+        <module>_03_less_dumb_rest</module>
     </modules>
 
     <properties>
