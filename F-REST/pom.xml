@@ -13,6 +13,7 @@
         <module>_01_jackson_demo</module>
         <module>_02_basic_REST</module>
         <module>_03_less_dumb_rest</module>
+        <module>_04_CRUD_REST_interface</module>
     </modules>
 
     <properties>

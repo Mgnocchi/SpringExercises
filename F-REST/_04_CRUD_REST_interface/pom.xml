@@ -6,7 +6,7 @@
         <artifactId>F-REST</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>_03_less_dumb_rest</artifactId>
+    <artifactId>_04_CRUD_REST_interface</artifactId>
     <packaging>war</packaging>
 
     <dependencies>
@@ -28,7 +28,7 @@
     </dependencies>
 
     <build>
-        <finalName>_03_less_dumb_rest</finalName>
+        <finalName>_04_CRUD_REST_interface</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
